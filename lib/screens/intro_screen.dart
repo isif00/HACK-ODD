@@ -20,19 +20,19 @@ class _IntroScreenState extends State<IntroScreen> {
       ),
       body: Container(
         padding: const EdgeInsets.all(10),
-        child: const Column(children: [
-          TextInput(hintText: 'First Name'),
-          Gap(10),
-          TextInput(hintText: 'Last Name'),
-          Gap(10),
-          SizedBox(
-            height: 56,
-            width: double.infinity,
-            child: MainButton(),
-          )
-
-      ])),
-
+        child: const Column(
+          children: [
+            // First Name
+            TextInput(hintText: 'First Name'),
+            Gap(10),
+            // Last Name
+            TextInput(hintText: 'Last Name'),
+            Gap(10),
+            // continue Button
+            MainButton(buttonText: 'Continue'),
+          ],
+        ),
+      ),
     );
   }
 }
