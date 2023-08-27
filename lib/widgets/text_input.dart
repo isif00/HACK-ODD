@@ -16,7 +16,7 @@ class _TextInputState extends State<TextInput> {
       style: Styles.headLineSmall.copyWith(fontWeight: FontWeight.w500),
       decoration: InputDecoration(
         contentPadding:
-            const EdgeInsets.symmetric(vertical: 28.0, horizontal: 20.0),
+            const EdgeInsets.symmetric(vertical: 25.0, horizontal: 20.0),
         focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Styles.titleColor, width: 2.5),
             borderRadius: BorderRadius.circular(8.0)),
