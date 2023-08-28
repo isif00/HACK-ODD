@@ -4,6 +4,8 @@ import 'package:gap/gap.dart';
 import 'package:hack_odd/widgets/text_input.dart';
 import 'package:hack_odd/widgets/main_button.dart';
 
+import '../widgets/steps.dart';
+
 class IntroScreen extends StatefulWidget {
   const IntroScreen({super.key});
 
@@ -30,6 +32,9 @@ class _IntroScreenState extends State<IntroScreen> {
             Gap(10),
             // continue Button
             MainButton(buttonText: 'Continue'),
+            Gap(10),
+            // Stepper
+            Steps(currentStep: 3, totalSteps: 4)
           ],
         ),
       ),
