@@ -6,7 +6,8 @@ class Styles {
   static Color primaryColor = const Color(0xFF3FAC9C);
   static Color titleColor = const Color(0xFF254E48);
   static Color textColor = const Color(0xFF545454);
-
+  static Color darkPrimaryColor = const Color(0xFF254E48);
+  static Color stepGrey = const Color(0xFFD9D9D9);
   //Text Styles
   static TextStyle headLine1 = GoogleFonts.inter(
     fontSize: 32,
