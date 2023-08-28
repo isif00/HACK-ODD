@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hack_odd/utils/app_layout.dart';
 import 'package:hack_odd/utils/app_style.dart';
 
 class TextInput extends StatefulWidget {
@@ -15,8 +16,10 @@ class _TextInputState extends State<TextInput> {
     return TextField(
       style: Styles.headLineSmall.copyWith(fontWeight: FontWeight.w800),
       decoration: InputDecoration(
-        contentPadding:
-            const EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
+        contentPadding: EdgeInsets.symmetric(
+          vertical: AppLayout.getHeight(20.0),
+          horizontal: AppLayout.getWidth(20.0),
+        ),
         focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Styles.titleColor, width: 2.5),
             borderRadius: BorderRadius.circular(8.0)),
