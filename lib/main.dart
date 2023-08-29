@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hack_odd/screens/intro_screen.dart';
+import 'package:hack_odd/utils/app_layout.dart';
 import 'package:hack_odd/utils/app_style.dart';
 
 void main() {
@@ -14,8 +15,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          primarySwatch: Colors.blueGrey, primaryColor: Styles.primaryColor),
-      home: const IntroScreen(),
+        primaryColor: Styles.titleColor,
+        inputDecorationTheme: InputDecorationTheme(
+          focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                  color: Styles.titleColor, width: AppLayout.getHeight(2.5)),
+              borderRadius: BorderRadius.circular(8.0)),
+          enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+                  color: Styles.disabledColor, width: AppLayout.getHeight(2.0)),
+              borderRadius: BorderRadius.circular(8.0)),
+        ),
+      ),
+      home: IntroScreen(),
     );
   }
 }
