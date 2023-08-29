@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
+import 'package:hack_odd/widgets/birthday_field.dart';
 import 'package:hack_odd/widgets/pronouns_dropdown.dart';
 import 'package:hack_odd/widgets/text_input.dart';
 import 'package:hack_odd/widgets/main_button.dart';
@@ -25,17 +25,21 @@ class _IntroScreenState extends State<IntroScreen> {
         padding: const EdgeInsets.all(10),
         child: const Column(
           children: [
-            // First Name
             Row(
               children: [
+                //pronouns DropDown
                 PronounsDropDown(),
                 Gap(10),
+                // First Name
                 Expanded(child: TextInput(hintText: 'First Name')),
               ],
             ),
             Gap(10),
             // Last Name
             TextInput(hintText: 'Last Name'),
+            Gap(10),
+            //DOB Field
+            DobInputField(),
             Gap(10),
             // continue Button
             MainButton(buttonText: 'Continue'),
