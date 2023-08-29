@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hack_odd/utils/app_layout.dart';
 import 'package:hack_odd/utils/app_style.dart';
 
 class MainButton extends StatelessWidget {
@@ -8,7 +9,7 @@ class MainButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 56,
+      height: AppLayout.getHeight(56),
       width: double.infinity,
       child: ElevatedButton(
         onPressed: () {},
