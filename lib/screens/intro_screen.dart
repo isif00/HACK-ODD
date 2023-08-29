@@ -4,6 +4,8 @@ import 'package:hack_odd/widgets/birthday_field.dart';
 import 'package:hack_odd/widgets/pronouns_dropdown.dart';
 import 'package:hack_odd/widgets/text_input.dart';
 import 'package:hack_odd/widgets/main_button.dart';
+import 'package:hack_odd/widgets/steps.dart';
+
 
 import '../widgets/steps.dart';
 
@@ -23,7 +25,7 @@ class _IntroScreenState extends State<IntroScreen> {
       ),
       body: Container(
         padding: const EdgeInsets.all(10),
-        child: const Column(
+        child:  Column(
           children: [
             Row(
               children: [
