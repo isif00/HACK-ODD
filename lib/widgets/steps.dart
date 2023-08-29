@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
+import 'package:hack_odd/utils/app_layout.dart';
 import 'package:hack_odd/utils/app_style.dart';
 
 class Steps extends StatelessWidget {
@@ -15,22 +15,22 @@ class Steps extends StatelessWidget {
       if (i >= currentStep) {
         iconButtonWidgets.add(
           Container(
-            margin: const EdgeInsets.all(5),
+            margin: EdgeInsets.all(AppLayout.getHeight(5)),
             child: Icon(
               Icons.circle_rounded,
               color: Styles.disabledColor,
-              size: 15,
+              size: AppLayout.getHeight(15),
             ),
           ),
         );
       } else {
         iconButtonWidgets.add(
           Container(
-            margin: const EdgeInsets.all(5),
+            margin: EdgeInsets.all(AppLayout.getHeight(5)),
             child: Icon(
               Icons.circle_rounded,
               color: Styles.primaryColor,
-              size: 15,
+              size: AppLayout.getHeight(15),
             ),
           ),
           // Customize the icon as needed

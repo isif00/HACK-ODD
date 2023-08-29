@@ -21,10 +21,12 @@ class _TextInputState extends State<TextInput> {
           horizontal: AppLayout.getWidth(20.0),
         ),
         focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Styles.titleColor, width: 2.5),
+            borderSide: BorderSide(
+                color: Styles.titleColor, width: AppLayout.getHeight(2.5)),
             borderRadius: BorderRadius.circular(8.0)),
         enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Styles.disabledColor, width: 2.0),
+            borderSide: BorderSide(
+                color: Styles.disabledColor, width: AppLayout.getHeight(2.0)),
             borderRadius: BorderRadius.circular(8.0)),
         hintText: widget.hintText,
       ),

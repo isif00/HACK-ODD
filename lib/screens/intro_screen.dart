@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
+import 'package:hack_odd/widgets/pronouns_dropdown.dart';
 import 'package:hack_odd/widgets/text_input.dart';
 import 'package:hack_odd/widgets/main_button.dart';
 
@@ -25,7 +26,13 @@ class _IntroScreenState extends State<IntroScreen> {
         child: const Column(
           children: [
             // First Name
-            TextInput(hintText: 'First Name'),
+            Row(
+              children: [
+                PronounsDropDown(),
+                Gap(10),
+                Expanded(child: TextInput(hintText: 'First Name')),
+              ],
+            ),
             Gap(10),
             // Last Name
             TextInput(hintText: 'Last Name'),
@@ -34,7 +41,8 @@ class _IntroScreenState extends State<IntroScreen> {
             MainButton(buttonText: 'Continue'),
             Gap(10),
             // Stepper
-            Steps(currentStep: 3, totalSteps: 4)
+            Steps(currentStep: 3, totalSteps: 4),
+            Gap(10),
           ],
         ),
       ),
