@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hack_odd/screens/intro_screen.dart';
+import 'package:hack_odd/screens/events_screen.dart';
 import 'package:hack_odd/utils/app_layout.dart';
 import 'package:hack_odd/utils/app_style.dart';
 
@@ -15,8 +15,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        appBarTheme: AppBarTheme(
+            toolbarHeight: AppLayout.getHeight(65),
+            elevation: 0.0,
+            backgroundColor: Colors.white,
+            iconTheme: IconThemeData(color: Styles.primaryColor)),
         primaryColor: Styles.titleColor,
         inputDecorationTheme: InputDecorationTheme(
+          suffixIconColor: Styles.primaryColor,
           focusedBorder: OutlineInputBorder(
               borderSide: BorderSide(
                   color: Styles.titleColor, width: AppLayout.getHeight(2.5)),
@@ -27,7 +33,7 @@ class MyApp extends StatelessWidget {
               borderRadius: BorderRadius.circular(8.0)),
         ),
       ),
-      home: IntroScreen(),
+      home: const EventsScreen(),
     );
   }
 }
