@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:hack_odd/utils/app_layout.dart';
 import 'package:hack_odd/utils/app_style.dart';
 
 class MainButton extends StatelessWidget {
-  const MainButton({super.key, required this.buttonText});
+  const MainButton({super.key, required this.buttonText, this.icon});
   final String buttonText;
+  final IconData? icon;
 
   @override
   Widget build(BuildContext context) {
@@ -20,12 +22,21 @@ class MainButton extends StatelessWidget {
             ),
             elevation: 0.0,
             shadowColor: Colors.transparent),
-        child: Text(
-          buttonText,
-          style: const TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.w700,
-          ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              buttonText,
+              style: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            icon == null
+                ? Gap(AppLayout.getWidth(0))
+                : Gap(AppLayout.getWidth(15)),
+            Icon(icon),
+          ],
         ),
       ),
     );

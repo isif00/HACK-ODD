@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:hack_odd/utils/app_layout.dart';
 import 'package:hack_odd/widgets/birthday_field.dart';
+import 'package:hack_odd/widgets/event_card.dart';
 import 'package:hack_odd/widgets/pronouns_dropdown.dart';
+import 'package:hack_odd/widgets/search_bar.dart';
 import 'package:hack_odd/widgets/text_input.dart';
 import 'package:hack_odd/widgets/main_button.dart';
 import 'package:hack_odd/widgets/steps.dart';
+import 'package:hack_odd/widgets/underline.dart';
+import 'package:hack_odd/widgets/user_card.dart';
 
 class IntroScreen extends StatefulWidget {
   const IntroScreen({super.key});
@@ -18,38 +23,86 @@ class _IntroScreenState extends State<IntroScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        actions: [
+          // User icon
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.person),
+          ),
+          Gap(AppLayout.getWidth(8)),
+
+          // Search Bar
+          Expanded(
+            child: AppBarSearch(
+              filterSearchResults: (value) {},
+            ),
+          ),
+          Gap(AppLayout.getWidth(8)),
+
+          // Notification Icon
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.domain_verification),
+          ),
+        ],
       ),
-      body: Container(
-        padding: const EdgeInsets.all(10),
-        child: const Column(
-          children: [
-            Row(
+      body: Column(
+        children: [
+          const Underline(),
+          Expanded(
+            child: ListView(
               children: [
-                //pronouns DropDown
-                PronounsDropDown(),
-                Gap(10),
-                // First Name
-                Expanded(child: TextInput(hintText: 'First Name')),
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  child: Column(
+                    children: [
+                      const Row(
+                        children: [
+                          //pronouns DropDown
+                          PronounsDropDown(),
+                          Gap(10),
+                          // First Name
+                          Expanded(child: TextInput(hintText: 'First Name')),
+                        ],
+                      ),
+                      const Gap(10),
+                      // Last Name
+                      const TextInput(hintText: 'Last Name'),
+                      const Gap(10),
+                      //DOB Field
+                      const DobInputField(),
+                      const Gap(10),
+                      // continue Button
+                      const MainButton(buttonText: 'Continue'),
+                      const Gap(10),
+                      // Stepper
+                      const Steps(currentStep: 3, totalSteps: 4),
+                      const Gap(10),
+
+                      // UserCard
+                      const UserCard(
+                        profession: 'Volunteer',
+                        professionDescription: 'join and make difference',
+                      ),
+                      const Gap(10),
+
+                      // EventCard
+                      EventCard(
+                        eventDate: DateTime.now(),
+                        eventTitle: 'Planet CleanUp',
+                        eventDescription:
+                            'this is the best event u will ever attend so make sure to join and to not miss anythin',
+                        eventLocation: "Algeria",
+                        eventParticipants: 15,
+                      ),
+                      const Gap(10)
+                    ],
+                  ),
+                ),
               ],
             ),
-            Gap(10),
-            // Last Name
-            TextInput(hintText: 'Last Name'),
-            Gap(10),
-            //DOB Field
-            DobInputField(),
-            Gap(10),
-            // continue Button
-            MainButton(buttonText: 'Continue'),
-            Gap(10),
-            // Stepper
-            Steps(currentStep: 3, totalSteps: 4),
-            Gap(10),
-            // Search Bar
-            SearchBar(),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

@@ -39,6 +39,7 @@ dependencies:
   gap: ^3.0.1
   get: ^4.6.5
   dob_input_field: ^2.0.0
+  intl: ^0.18.1
 
 dev_dependencies:
   flutter_test:
