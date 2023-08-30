@@ -1,5 +1,6 @@
 import 'package:dob_input_field/dob_input_field.dart';
 import 'package:flutter/material.dart';
+import 'package:hack_odd/utils/app_style.dart';
 
 class DobInputField extends StatelessWidget {
   const DobInputField({Key? key}) : super(key: key);
@@ -7,6 +8,7 @@ class DobInputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DOBInputField(
+      cursorColor: Styles.titleColor,
       inputDecoration: InputDecoration(
         counterText: "",
         border: OutlineInputBorder(
