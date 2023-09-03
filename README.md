@@ -1,3 +1,4 @@
-# HACK ODD
-  Always git pull before start working !
+# Econnect
+
+  under construction 📕
 
