@@ -3,6 +3,7 @@ import 'package:gap/gap.dart';
 import 'package:hack_odd/utils/app_layout.dart';
 import 'package:hack_odd/widgets/birthday_field.dart';
 import 'package:hack_odd/widgets/event_card.dart';
+import 'package:hack_odd/widgets/filter_button.dart';
 import 'package:hack_odd/widgets/pronouns_dropdown.dart';
 import 'package:hack_odd/widgets/search_bar.dart';
 import 'package:hack_odd/widgets/text_input.dart';
@@ -95,7 +96,17 @@ class _IntroScreenState extends State<IntroScreen> {
                         eventLocation: "Algeria",
                         eventParticipants: 15,
                       ),
-                      const Gap(10)
+                      const Gap(10),
+                      //filter Button
+                      const SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(children: [
+                          FilterButton(filterField: 'Community'),
+                          FilterButton(filterField: 'Clubs'),
+                          FilterButton(filterField: 'Goverment'),
+                          FilterButton(filterField: 'organizations')
+                        ]),
+                      )
                     ],
                   ),
                 ),

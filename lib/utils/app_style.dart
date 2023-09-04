@@ -21,4 +21,10 @@ class Styles {
     fontWeight: FontWeight.w300,
     color: titleColor,
   );
+
+  static TextStyle headLineMedium = GoogleFonts.inter(
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+    color: primaryColor,
+  );
 }
