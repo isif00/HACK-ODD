@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:hack_odd/utils/app_layout.dart';
 import 'package:hack_odd/utils/app_style.dart';
 
-class Steps extends StatelessWidget {
-  const Steps({super.key, required this.totalSteps, required this.currentStep});
+class PagesStepper extends StatelessWidget {
+  const PagesStepper(
+      {super.key, required this.totalSteps, required this.currentStep});
   final int totalSteps;
   final int currentStep;
 
@@ -33,7 +34,6 @@ class Steps extends StatelessWidget {
               size: AppLayout.getHeight(15),
             ),
           ),
-          // Customize the icon as needed
         );
       }
     }

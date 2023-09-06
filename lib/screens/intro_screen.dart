@@ -6,9 +6,10 @@ import 'package:hack_odd/widgets/event_card.dart';
 import 'package:hack_odd/widgets/filter_button.dart';
 import 'package:hack_odd/widgets/pronouns_dropdown.dart';
 import 'package:hack_odd/widgets/search_bar.dart';
+import 'package:hack_odd/widgets/stars_stepper.dart';
 import 'package:hack_odd/widgets/text_input.dart';
 import 'package:hack_odd/widgets/main_button.dart';
-import 'package:hack_odd/widgets/steps.dart';
+import 'package:hack_odd/widgets/pages_steps.dart';
 import 'package:hack_odd/widgets/underline.dart';
 import 'package:hack_odd/widgets/user_card.dart';
 
@@ -77,7 +78,10 @@ class _IntroScreenState extends State<IntroScreen> {
                       const MainButton(buttonText: 'Continue'),
                       const Gap(10),
                       // Stepper
-                      const Steps(currentStep: 3, totalSteps: 4),
+                      const PagesStepper(
+                        currentStep: 3,
+                        totalSteps: 4,
+                      ),
                       const Gap(10),
 
                       // UserCard
@@ -100,13 +104,18 @@ class _IntroScreenState extends State<IntroScreen> {
                       //filter Button
                       const SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
-                        child: Row(children: [
-                          FilterButton(filterField: 'Community'),
-                          FilterButton(filterField: 'Clubs'),
-                          FilterButton(filterField: 'Goverment'),
-                          FilterButton(filterField: 'organizations')
-                        ]),
-                      )
+                        child: Row(
+                          children: [
+                            FilterButton(filterField: 'Community'),
+                            FilterButton(filterField: 'Clubs'),
+                            FilterButton(filterField: 'Goverment'),
+                            FilterButton(filterField: 'organizations')
+                          ],
+                        ),
+                      ),
+                      const Gap(10),
+                      //Stars stepper
+                      const StarsStepper(totalSteps: 5)
                     ],
                   ),
                 ),

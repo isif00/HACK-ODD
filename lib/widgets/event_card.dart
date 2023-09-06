@@ -64,20 +64,21 @@ class EventCard extends StatelessWidget {
                             ),
                           ),
                           const Spacer(),
-                          IconButton(
-                            iconSize: 20,
-                            onPressed: () {},
-                            icon: Icon(
+                          GestureDetector(
+                            onTap: () {},
+                            child: Icon(
                               Icons.arrow_drop_down_circle_outlined,
                               color: Styles.primaryColor,
+                              size: AppLayout.getHeight(20),
                             ),
                           ),
-                          IconButton(
-                            iconSize: 20,
-                            onPressed: () {},
-                            icon: Icon(
+                          const Gap(5),
+                          GestureDetector(
+                            onTap: () {},
+                            child: Icon(
                               Icons.archive_sharp,
                               color: Styles.primaryColor,
+                              size: AppLayout.getHeight(20),
                             ),
                           ),
                         ],
