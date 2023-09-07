@@ -30,7 +30,7 @@ class _StarsStepperState extends State<StarsStepper> {
               child: Icon(
                 Icons.star,
                 color: Styles.disabledColor,
-                size: AppLayout.getHeight(15),
+                size: AppLayout.getHeight(20),
               ),
             ),
           ),
@@ -48,7 +48,7 @@ class _StarsStepperState extends State<StarsStepper> {
               child: Icon(
                 Icons.star,
                 color: Styles.primaryColor,
-                size: AppLayout.getHeight(15),
+                size: AppLayout.getHeight(20),
               ),
             ),
           ),

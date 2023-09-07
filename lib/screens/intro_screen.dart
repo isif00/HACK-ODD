@@ -4,6 +4,7 @@ import 'package:hack_odd/utils/app_layout.dart';
 import 'package:hack_odd/widgets/birthday_field.dart';
 import 'package:hack_odd/widgets/event_card.dart';
 import 'package:hack_odd/widgets/filter_button.dart';
+import 'package:hack_odd/widgets/post_widget.dart';
 import 'package:hack_odd/widgets/pronouns_dropdown.dart';
 import 'package:hack_odd/widgets/search_bar.dart';
 import 'package:hack_odd/widgets/stars_stepper.dart';
@@ -115,7 +116,18 @@ class _IntroScreenState extends State<IntroScreen> {
                       ),
                       const Gap(10),
                       //Stars stepper
-                      const StarsStepper(totalSteps: 5)
+                      const StarsStepper(totalSteps: 5),
+                      const Gap(10),
+                      //PostWidget
+                      PostWidget(
+                        blogAuthor: 'Planet Mate',
+                        publishDate: DateTime.now(),
+                        blogDescreption:
+                            'this is the best event u will ever attend so make sure to join and to not miss anythin, this is the will ever attend so make sure to join and to not miss anythin, this is the bewill ever attend so make sure to join and to not miss anythin, this is the bewill ever attend so make sure to join and to not miss anythin, this is the bewill ever attend so make sure to join and to not miss anythin, this is the bewill ever attend so make sure to join and to not miss anythin, this is the bewill ever attend so make sure to join and to not miss anythin, this is the bewill ever attend so make sure to join and to not miss anythin, this is the bewill ever attend so make sure to join and to not miss anythin, this is the bewill ever attend so make sure to join and to not miss anythin, this is the bewill ever attend so make sure to join and to not miss anythin, this is the bewill ever attend so make sure to join and to not miss anythin, this is the bebest event u will ever attend so make sure to join and to not miss athis is the best event u will ever attend so make sure to join and to not miss anythin',
+                        numberOfComments: 165,
+                        numberOfLikes: 2000,
+                      ),
+                      const Gap(10),
                     ],
                   ),
                 ),
