@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hack_odd/utils/app_layout.dart';
 import 'package:hack_odd/widgets/birthday_field.dart';
+import 'package:hack_odd/widgets/blog_widget.dart';
 import 'package:hack_odd/widgets/event_card.dart';
 import 'package:hack_odd/widgets/filter_button.dart';
 import 'package:hack_odd/widgets/post_widget.dart';
@@ -116,7 +117,10 @@ class _IntroScreenState extends State<IntroScreen> {
                       ),
                       const Gap(10),
                       //Stars stepper
-                      const StarsStepper(totalSteps: 5),
+                      const StarsStepper(
+                        totalSteps: 5,
+                        clickable: true,
+                      ),
                       const Gap(10),
                       //PostWidget
                       PostWidget(
@@ -126,6 +130,15 @@ class _IntroScreenState extends State<IntroScreen> {
                             'this is the best event u will ever attend so make sure to join and to not miss anythin, this is the will ever attend so make sure to join and to not miss anythin, this is the bewill ever attend so make sure to join and to not miss anythin, this is the bewill ever attend so make sure to join and to not miss anythin, this is the bewill ever attend so make sure to join and to not miss anythin, this is the bewill ever attend so make sure to join and to not miss anythin, this is the bewill ever attend so make sure to join and to not miss anythin, this is the bewill ever attend so make sure to join and to not miss anythin, this is the bewill ever attend so make sure to join and to not miss anythin, this is the bewill ever attend so make sure to join and to not miss anythin, this is the bewill ever attend so make sure to join and to not miss anythin, this is the bewill ever attend so make sure to join and to not miss anythin, this is the bebest event u will ever attend so make sure to join and to not miss athis is the best event u will ever attend so make sure to join and to not miss anythin',
                         numberOfComments: 165,
                         numberOfLikes: 2000,
+                      ),
+                      const Gap(10),
+                      //Blog Widget
+                      const BlogWidget(
+                        blogTitle: 'Nature In Danger',
+                        blogDescription:
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.rem ipsum dolor sit amet, consectetur adipiscing elit.',
+                        blogAuthor: 'Planet Mate',
+                        rating: 3,
                       ),
                       const Gap(10),
                     ],
