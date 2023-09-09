@@ -35,12 +35,12 @@ class EventCard extends StatelessWidget {
             Row(
               children: [
                 Container(
-                  width: AppLayout.getHeight(80),
+                  width: AppLayout.getHeight(90),
                   height: AppLayout.getHeight(80),
                   decoration: BoxDecoration(
                     image: const DecorationImage(
                       image: AssetImage(
-                          'images/test.png'), // Replace with your image asset path
+                          'assets/image.png'), // Replace with your image asset path
                       fit: BoxFit.fill,
                     ),
                     borderRadius: BorderRadius.circular(8),

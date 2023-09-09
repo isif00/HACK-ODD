@@ -35,9 +35,12 @@ class _EventsScreenState extends State<EventsScreen> {
       appBar: AppBar(
         actions: [
           // User icon
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.person),
+          GestureDetector(
+            onTap: () {},
+            child: const CircleAvatar(
+              backgroundImage: AssetImage("assets/images/user.png"),
+              radius: 16,
+            ),
           ),
           Gap(AppLayout.getWidth(8)),
 

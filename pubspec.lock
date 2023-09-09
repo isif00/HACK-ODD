@@ -113,6 +113,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
+  fluentui_system_icons:
+    dependency: "direct main"
+    description:
+      name: fluentui_system_icons
+      sha256: "1beaa4ad131a59b6e4ce651c3f9746d1442af015f0ad2c9c01c73f22b275f8c4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.213"
   flutter:
     dependency: "direct main"
     description: flutter

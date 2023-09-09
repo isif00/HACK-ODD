@@ -29,9 +29,15 @@ class _IntroScreenState extends State<IntroScreen> {
       appBar: AppBar(
         actions: [
           // User icon
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.person),
+          Padding(
+            padding: EdgeInsets.only(left: AppLayout.getHeight(15)),
+            child: GestureDetector(
+              onTap: () {},
+              child: const CircleAvatar(
+                backgroundImage: AssetImage("assets/image.png"),
+                radius: 19,
+              ),
+            ),
           ),
           Gap(AppLayout.getWidth(8)),
 
