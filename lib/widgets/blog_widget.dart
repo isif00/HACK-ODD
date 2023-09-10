@@ -1,3 +1,4 @@
+import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hack_odd/utils/app_layout.dart';
@@ -41,7 +42,7 @@ class BlogWidget extends StatelessWidget {
                 GestureDetector(
                   onTap: () {},
                   child: Icon(
-                    Icons.bookmark_border_rounded,
+                    FluentIcons.bookmark_24_regular,
                     size: 25,
                     color: Styles.primaryColor,
                   ),

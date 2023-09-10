@@ -1,3 +1,4 @@
+import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hack_odd/utils/app_layout.dart';
@@ -35,12 +36,12 @@ class EventCard extends StatelessWidget {
             Row(
               children: [
                 Container(
-                  width: AppLayout.getHeight(80),
+                  width: AppLayout.getHeight(90),
                   height: AppLayout.getHeight(80),
                   decoration: BoxDecoration(
                     image: const DecorationImage(
                       image: AssetImage(
-                          'images/test.png'), // Replace with your image asset path
+                          'assets/image.png'), // Replace with your image asset path
                       fit: BoxFit.fill,
                     ),
                     borderRadius: BorderRadius.circular(8),
@@ -67,7 +68,7 @@ class EventCard extends StatelessWidget {
                           GestureDetector(
                             onTap: () {},
                             child: Icon(
-                              Icons.arrow_drop_down_circle_outlined,
+                              FluentIcons.re_order_dots_horizontal_16_regular,
                               color: Styles.primaryColor,
                               size: AppLayout.getHeight(20),
                             ),
@@ -76,7 +77,7 @@ class EventCard extends StatelessWidget {
                           GestureDetector(
                             onTap: () {},
                             child: Icon(
-                              Icons.archive_sharp,
+                              FluentIcons.bookmark_24_regular,
                               color: Styles.primaryColor,
                               size: AppLayout.getHeight(20),
                             ),
@@ -145,7 +146,7 @@ class EventCard extends StatelessWidget {
                   Column(
                     children: [
                       Text(
-                        '${eventDate.day} ${DateFormat('MMMM').format(eventDate)}',
+                        '${eventDate.day} ${(DateFormat('MMMM').format(eventDate)).substring(0, 3)}',
                         style: Styles.headLineSmall.copyWith(
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
@@ -172,7 +173,7 @@ class EventCard extends StatelessWidget {
                   Column(
                     children: [
                       Text(
-                        eventLocation,
+                        eventLocation.substring(0, 3),
                         style: Styles.headLineSmall.copyWith(
                           fontSize: 16,
                           fontWeight: FontWeight.w600,

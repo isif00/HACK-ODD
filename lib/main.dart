@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hack_odd/screens/events_screen.dart';
 //import 'package:hack_odd/screens/events_screen.dart';
 import 'package:hack_odd/screens/intro_screen.dart';
+import 'package:hack_odd/screens/intro_screens/intro_1.dart';
 import 'package:hack_odd/utils/app_layout.dart';
 import 'package:hack_odd/utils/app_style.dart';
 
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
               borderRadius: BorderRadius.circular(8.0)),
         ),
       ),
-      home: const IntroScreen(),
+      home: const EventsScreen(),
     );
   }
 }

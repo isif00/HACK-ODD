@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hack_odd/utils/app_layout.dart';
 import 'package:hack_odd/utils/app_style.dart';
+import 'package:hack_odd/widgets/blog_widget.dart';
+import 'package:hack_odd/widgets/event_card.dart';
 import 'package:hack_odd/widgets/search_bar.dart';
 
 class EventsScreen extends StatefulWidget {
@@ -35,9 +37,12 @@ class _EventsScreenState extends State<EventsScreen> {
       appBar: AppBar(
         actions: [
           // User icon
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.person),
+          GestureDetector(
+            onTap: () {},
+            child: const CircleAvatar(
+              backgroundImage: AssetImage("assets/images/user.png"),
+              radius: 16,
+            ),
           ),
           Gap(AppLayout.getWidth(8)),
 
@@ -71,9 +76,12 @@ class _EventsScreenState extends State<EventsScreen> {
               shrinkWrap: true,
               itemCount: items.length,
               itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text(items[index]),
-                );
+                return EventCard(
+                    eventTitle: "test",
+                    eventDescription: "description",
+                    eventParticipants: 100,
+                    eventDate: DateTime.now(),
+                    eventLocation: "alger");
               },
             ),
           ),

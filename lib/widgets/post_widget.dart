@@ -1,3 +1,4 @@
+import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hack_odd/utils/app_layout.dart';
@@ -32,7 +33,7 @@ class PostWidget extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 5),
+              padding: EdgeInsets.symmetric(horizontal: AppLayout.getHeight(5)),
               child: Row(
                 children: [
                   const CircleAvatar(
@@ -69,7 +70,7 @@ class PostWidget extends StatelessWidget {
                         GestureDetector(
                           onTap: () {},
                           child: Icon(
-                            Icons.monetization_on_outlined,
+                            FluentIcons.money_20_regular,
                             color: Styles.primaryColor,
                             size: 22,
                           ),
@@ -78,7 +79,7 @@ class PostWidget extends StatelessWidget {
                         GestureDetector(
                           onTap: () {},
                           child: Icon(
-                            Icons.bookmark_border,
+                            FluentIcons.bookmark_24_regular,
                             color: Styles.primaryColor,
                             size: 22,
                           ),
@@ -109,33 +110,33 @@ class PostWidget extends StatelessWidget {
                 ),
               ),
             ),
-            Gap(AppLayout.getHeight(25)),
+            Gap(AppLayout.getHeight(10)),
             Row(
               children: [
                 GestureDetector(
                   onTap: () {},
                   child: Icon(
-                    Icons.heart_broken_outlined,
+                    FluentIcons.heart_24_regular,
                     color: Styles.primaryColor,
-                    size: 30,
+                    size: 25,
                   ),
                 ),
-                Gap(AppLayout.getHeight(20)),
+                Gap(AppLayout.getHeight(10)),
                 GestureDetector(
                   onTap: () {},
                   child: Icon(
-                    Icons.chat_bubble_outline_rounded,
+                    FluentIcons.chat_bubbles_question_24_regular,
                     color: Styles.primaryColor,
-                    size: 30,
+                    size: 25,
                   ),
                 ),
-                Gap(AppLayout.getHeight(20)),
+                Gap(AppLayout.getHeight(10)),
                 GestureDetector(
                   onTap: () {},
                   child: Icon(
-                    Icons.send,
+                    FluentIcons.share_24_regular,
                     color: Styles.primaryColor,
-                    size: 30,
+                    size: 25,
                   ),
                 ),
                 const Spacer(),
