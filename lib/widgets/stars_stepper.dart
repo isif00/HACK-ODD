@@ -1,3 +1,4 @@
+import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:hack_odd/utils/app_layout.dart';
 import 'package:hack_odd/utils/app_style.dart';
@@ -35,7 +36,7 @@ class _StarsStepperState extends State<StarsStepper> {
                   : () {};
             },
             child: Icon(
-              Icons.star,
+              FluentIcons.star_24_filled,
               color: (i >=
                       ((widget.clickable)
                           ? _currentStep + 1

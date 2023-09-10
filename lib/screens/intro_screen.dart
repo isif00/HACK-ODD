@@ -1,3 +1,4 @@
+import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hack_odd/utils/app_layout.dart';
@@ -50,9 +51,15 @@ class _IntroScreenState extends State<IntroScreen> {
           Gap(AppLayout.getWidth(8)),
 
           // Notification Icon
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.domain_verification),
+          Padding(
+            padding: EdgeInsets.only(right: AppLayout.getHeight(18)),
+            child: GestureDetector(
+              onTap: () {},
+              child: const Icon(
+                FluentIcons.alert_28_regular,
+                size: 30,
+              ),
+            ),
           ),
         ],
       ),
