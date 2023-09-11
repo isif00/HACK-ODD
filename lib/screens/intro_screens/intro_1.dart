@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:hack_odd/screens/intro_screens/intro_2.dart';
 import 'package:hack_odd/utils/app_layout.dart';
 import 'package:hack_odd/utils/app_style.dart';
-import 'package:hack_odd/widgets/main_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -52,7 +52,11 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 margin: EdgeInsets.zero,
                 child: Padding(
-                  padding: EdgeInsets.all(AppLayout.getHeight(20)),
+                  padding: EdgeInsets.only(
+                      left: AppLayout.getHeight(20),
+                      right: AppLayout.getHeight(20),
+                      top: AppLayout.getHeight(40),
+                      bottom: AppLayout.getHeight(40)),
                   child: Column(
                     children: [
                       RichText(
@@ -77,14 +81,45 @@ class WelcomeScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Gap(AppLayout.getHeight(15)),
+                      const Spacer(),
                       Text(
                         textAlign: TextAlign.center,
                         'Pour assurer la sécurité de votre compte, veuillez entrer le code de vérification que nous avons envoyé à votre numéro de téléphone',
                         style: Styles.headLineSmall,
                       ),
-                      Gap(AppLayout.getHeight(25)),
-                      const MainButton(buttonText: 'Get Started'),
+                      const Spacer(),
+                      SizedBox(
+                        height: AppLayout.getHeight(56),
+                        width: double.infinity,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const WelcomeScreen2()),
+                            );
+                          },
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Styles.primaryColor,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16.0),
+                              ),
+                              elevation: 0.0,
+                              shadowColor: Colors.transparent),
+                          child: const Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                'Get Started',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
                       Gap(AppLayout.getHeight(25)),
                       RichText(
                         text: TextSpan(

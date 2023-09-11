@@ -4,9 +4,11 @@ import 'package:hack_odd/utils/app_layout.dart';
 import 'package:hack_odd/utils/app_style.dart';
 
 class MainButton extends StatelessWidget {
-  const MainButton({super.key, required this.buttonText, this.icon});
+  const MainButton(
+      {super.key, required this.buttonText, this.icon, this.nextWidget});
   final String buttonText;
   final IconData? icon;
+  final Widget? nextWidget;
 
   @override
   Widget build(BuildContext context) {
