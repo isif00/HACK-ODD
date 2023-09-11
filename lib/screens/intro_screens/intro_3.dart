@@ -1,13 +1,13 @@
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:hack_odd/screens/intro_screens/intro_3.dart';
+import 'package:hack_odd/screens/intro_screens/intro_4.dart';
 import 'package:hack_odd/utils/app_layout.dart';
 import 'package:hack_odd/utils/app_style.dart';
 import 'package:hack_odd/widgets/pages_steps.dart';
 
-class WelcomeScreen2 extends StatelessWidget {
-  const WelcomeScreen2({Key? key}) : super(key: key);
+class WelcomeScreen3 extends StatelessWidget {
+  const WelcomeScreen3({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,14 +25,14 @@ class WelcomeScreen2 extends StatelessWidget {
                 top: AppLayout.getHeight(90),
                 left: AppLayout.getHeight(15),
                 right: AppLayout.getHeight(15),
-                bottom: AppLayout.getHeight(30),
+                bottom: AppLayout.getHeight(10),
               ),
               child: Container(
                 height: AppLayout.getHeight(350),
                 width: AppLayout.getHeight(350),
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('assets/p2.png'),
+                    image: AssetImage('assets/p3.png'),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -40,12 +40,13 @@ class WelcomeScreen2 extends StatelessWidget {
             ),
             Gap(AppLayout.getHeight(25)),
             Text(
-              "Welcome to Econnect",
-              style: Styles.headLine1.copyWith(fontSize: 32),
+              "Explore Meaningful Volunteering",
+              style: Styles.headLine1.copyWith(fontSize: 28),
+              textAlign: TextAlign.center,
             ),
             Gap(AppLayout.getHeight(30)),
             Text(
-              "Embark on a journey to safeguard our planet. Join our community of changemakers",
+              "Make a difference by participating in various events that address environmental challenges. Your actions matter!",
               style: Styles.headLineMedium
                   .copyWith(fontSize: 16, color: Styles.textColor),
               textAlign: TextAlign.center,
@@ -55,7 +56,7 @@ class WelcomeScreen2 extends StatelessWidget {
               padding: EdgeInsets.all(AppLayout.getHeight(20)),
               child: Row(
                 children: [
-                  const PagesStepper(totalSteps: 3, currentStep: 1),
+                  const PagesStepper(totalSteps: 3, currentStep: 2),
                   const Spacer(),
                   FloatingActionButton(
                     elevation: 0,
@@ -64,7 +65,7 @@ class WelcomeScreen2 extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const WelcomeScreen3()),
+                            builder: (context) => const WelcomeScreen4()),
                       );
                     },
                     child: const Icon(FluentIcons.arrow_right_24_filled),
