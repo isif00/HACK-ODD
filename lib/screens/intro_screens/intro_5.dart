@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:hack_odd/screens/user_authentification/main_signin.dart';
 import 'package:hack_odd/utils/app_layout.dart';
 import 'package:hack_odd/utils/app_style.dart';
-import 'package:hack_odd/widgets/pages_steps.dart';
 
 class WelcomeScreen5 extends StatelessWidget {
   const WelcomeScreen5({Key? key}) : super(key: key);
@@ -53,7 +53,12 @@ class WelcomeScreen5 extends StatelessWidget {
               height: AppLayout.getHeight(56),
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const MainSignIn()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Styles.primaryColor,
                     shape: RoundedRectangleBorder(
