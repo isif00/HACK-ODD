@@ -199,7 +199,7 @@ class EmailSignIn extends StatelessWidget {
                     color: Styles.primaryColor,
                     fontSize: 12,
                   ),
-                )
+                ),
               ],
             )
           ],

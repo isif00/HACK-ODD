@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hack_odd/screens/events_screen.dart';
-//import 'package:hack_odd/screens/events_screen.dart';
-import 'package:hack_odd/screens/intro_screen.dart';
-import 'package:hack_odd/screens/intro_screens/intro_1.dart';
-import 'package:hack_odd/screens/intro_screens/intro_2.dart';
 import 'package:hack_odd/screens/user_authentification/email_signin.dart';
-import 'package:hack_odd/screens/user_authentification/user_catrgory_selection.dart';
+import 'package:hack_odd/screens/user_authentification/user_info_signin.dart';
 import 'package:hack_odd/utils/app_layout.dart';
 import 'package:hack_odd/utils/app_style.dart';
 
@@ -39,7 +34,7 @@ class MyApp extends StatelessWidget {
               borderRadius: BorderRadius.circular(8.0)),
         ),
       ),
-      home: const EmailSignIn(),
+      home: const UserInfoSignIn(),
     );
   }
 }
