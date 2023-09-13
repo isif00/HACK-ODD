@@ -103,6 +103,7 @@ class _IntroScreenState extends State<IntroScreen> {
                       const UserCard(
                         profession: 'Volunteer',
                         professionDescription: 'join and make difference',
+                        userCategoryImage: 'volunteer.png',
                       ),
                       const Gap(10),
 
