@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hack_odd/screens/user_authentification/email_signin.dart';
 import 'package:hack_odd/screens/user_authentification/user_info_signin.dart';
+
 import 'package:hack_odd/utils/app_layout.dart';
 import 'package:hack_odd/utils/app_style.dart';
 
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: const UserInfoSignIn(),
+
     );
   }
 }
