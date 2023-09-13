@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hack_odd/utils/app_layout.dart';
 import 'package:hack_odd/utils/app_style.dart';
-import 'package:hack_odd/widgets/blog_widget.dart';
 import 'package:hack_odd/widgets/event_card.dart';
 import 'package:hack_odd/widgets/search_bar.dart';
 

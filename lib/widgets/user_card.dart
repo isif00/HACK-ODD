@@ -7,9 +7,11 @@ class UserCard extends StatelessWidget {
   const UserCard(
       {super.key,
       required this.profession,
-      required this.professionDescription});
+      required this.professionDescription,
+      required this.userCategoryImage});
   final String profession;
   final String professionDescription;
+  final String userCategoryImage;
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +57,9 @@ class UserCard extends StatelessWidget {
                 width: AppLayout.getHeight(110),
                 height: AppLayout.getHeight(100),
                 decoration: BoxDecoration(
-                  color: Styles.disabledColor,
+                  image: DecorationImage(
+                    image: AssetImage('assets/$userCategoryImage'),
+                  ),
                   borderRadius: BorderRadius.circular(16),
                 ),
               ),
